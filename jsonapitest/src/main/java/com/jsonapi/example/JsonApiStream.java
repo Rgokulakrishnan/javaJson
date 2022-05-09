@@ -16,7 +16,7 @@ import com.google.gson.stream.JsonReader;
 public class JsonApiStream {
 	public void parse(String jsonFilePath) {
 		// create JsonReader object and pass it the json file,json source or json text.
-		RandomAccessFileSimulation randomAccessfileSimulation = new RandomAccessFileSimulation();
+		
 
 		try (JsonReader jsonReader = new JsonReader(
 				new InputStreamReader(new FileInputStream(jsonFilePath), StandardCharsets.UTF_8))) {
@@ -31,8 +31,8 @@ public class JsonApiStream {
 
 				student = gson.fromJson(jsonReader, Student.class);
 				studentList.add(student);
-				// do something real
-//                System.out.println(document);
+				
+
 				numberOfRecords++;
 
 			}
