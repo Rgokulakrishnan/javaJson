@@ -30,9 +30,7 @@ public class jacksonApiStrean {
 	    List<Student> studentList = new ArrayList<Student>();
 		try(JsonParser jsonParser = mapper.getFactory().createJsonParser(source)) {
 	
-			 if (jsonParser.nextToken() != JsonToken.START_ARRAY) {
-		            throw new IllegalStateException("Expected content to be an array");
-		        }
+			 
 			while (jsonParser.nextToken() != JsonToken.END_ARRAY) {
 
 	            // Read a student instance using ObjectMapper and do something with it
